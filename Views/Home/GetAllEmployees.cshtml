@@ -1,0 +1,24 @@
+﻿@model List<Employee>
+<h2>Добавить нового сотрудники компании</h2>
+
+<form method="post" asp-action="Create" asp-controller="Home">
+    <div>
+        <h6>создание сотрудника</h6>
+        <input type="text" name="nameEmployee" />
+    </div>
+    <div>
+        <h6>создание компании</h6>
+        <input type="text" name="nameCompany" />
+    </div>
+    <div>
+        <input type="submit" value="Добавить" />
+    </div>
+</form>
+
+<h2>Все сотрудники и компания</h2>
+    <div>
+        @foreach( var emp in Model){
+            <p>@emp.Name</p>
+            <p>@emp.Company?.Name</p>
+        }
+    </div>
