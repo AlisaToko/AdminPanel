@@ -12,11 +12,5 @@ namespace AdminPanel.Models
 
         public string? Path { get; set; }
 
-        public ICollection<AllPictures> AllPictures { get; set; }//обратная связь один ко многим
-
-        public Pictures1()
-        {
-            AllPictures = new List<AllPictures>();
-        }
     }
 }

@@ -14,7 +14,7 @@ namespace AdminPanel.Models
         public DbSet<Employee> Employees { get; set; } = null!;
         public DbSet<Pictures> Pictures { get; set; } = null!;
         public DbSet<Pictures1> Pictures1 { get; set; } = null!;
-          public DbSet<AllNews> AllNews { get; set; } = null!;
+        public DbSet<AllNews> AllNews { get; set; } = null!;
 
 
         //созаем конструктор ApplicationContext, чтоб можно было инициализировать объекты класса AppliCationContext в других

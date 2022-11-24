@@ -1,4 +1,4 @@
-﻿/*using AdminPanel.Models;
+﻿using AdminPanel.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,11 +23,12 @@ namespace AdminPanel.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Create(string allNewsName, string allNewsDescription, string allNewsAction, IFormFileCollection uploadedFiles, int allNewsDate)
         {
             //создаем новость через экземпляр класса news
-            var allNews = new AllNews { Name = allNewsName, Description = allNewsDescription, Action = allNewsAction, Date = allNewsDate };
+            var allNews = new AllNews { Name = allNewsName, Description = allNewsDescription, Date = allNewsDate };
             await _context.AllNews.AddAsync(allNews);
             _context.SaveChanges();
 
@@ -51,4 +52,4 @@ namespace AdminPanel.Controllers
 
         }
     }
-}*/
+}
